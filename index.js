@@ -184,7 +184,7 @@ function taxCalc() {
     style: "currency",
     currency: "VND",
   }).format(finalTax);
-  const rs = `Họ và tên: ${name}; thuế thu nhập cá nhân phải trả là: ${formatted}`;
+  const rs = `Họ và tên: ${name}; <br> thuế thu nhập cá nhân phải trả là: ${formatted}`;
   showInfo_3.innerHTML = rs;
 }
 
@@ -222,7 +222,11 @@ const channelFee2 = 50;
 function getType() {
   const type = document.getElementById("type").value;
   document.getElementById("connectsNum").style.display =
-    "doanhNghiep" == type ? "block" : "none";
+    "doanhNghiep" == type ? "inline" : "none";
+  "doanhNghiep" == type
+    ? document.getElementById("btn4").classList.add(`mt-4`)
+    : document.getElementById("btn4").classList.remove(`mt-4`);
+
   return type;
 }
 
