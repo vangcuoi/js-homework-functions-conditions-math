@@ -1,0 +1,61 @@
+* {
+  font-size: 16px;
+}
+
+section {
+  margin: 15rem 0;
+  justify-items: center;
+}
+
+h1 {
+  font-size: 2rem;
+  font-weight: 500;
+  margin-bottom: 2rem;
+}
+h3 {
+  font-weight: 500;
+}
+
+p {
+  font-size: xx-large;
+  font-weight: 500;
+}
+
+input {
+  border-bottom: 2px solid rgb(0, 0, 0);
+  margin-right: 1rem;
+}
+
+input:focus-visible {
+  outline: 0;
+}
+
+select {
+  border-bottom: 2px solid rgb(0, 0, 0);
+  margin-right: 1rem;
+}
+
+select:focus-visible {
+  outline: 0;
+  border-bottom: 2px solid rgb(0, 0, 0);
+}
+
+.container {
+  max-width: 50%;
+}
+div button {
+  color: black;
+}
+
+button {
+  padding: 10px 20px;
+  border: 1.8px solid black;
+  color: white;
+}
+
+.areaSelector,
+.groupSelector {
+  margin-top: 1rem;
+  display: flex;
+  align-items: center;
+}

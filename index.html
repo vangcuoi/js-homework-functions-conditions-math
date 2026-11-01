@@ -1,0 +1,188 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <!-- tailwind -->
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
+    <!-- quản lý tuyển sinh -->
+    <section>
+      <div class="container">
+        <div class="title">
+          <h1>Quản lý tuyển sinh</h1>
+        </div>
+        <div class="calc">
+          <div class="input">
+            <input
+              class=""
+              id="subject_1_num"
+              type="number"
+              value=""
+              placeholder="điểm môn thứ 1"
+            />
+            <input
+              class=""
+              id="subject_2_num"
+              type="number"
+              value=""
+              placeholder="điểm môn thứ 2"
+            />
+            <input
+              class=""
+              id="subject_3_num"
+              type="number"
+              value=""
+              placeholder="điểm môn thứ 3"
+            />
+            <input
+              class=""
+              id="thresholdScore"
+              type="number"
+              value=""
+              placeholder="Điểm chuẩn"
+            />
+          </div>
+
+          <div class="areaSelector">
+            <h3 class="mr-2">khu vực ưu tiên:</h3>
+            <select name="" id="areaPriorType">
+              <option value="0">không</option>
+              <option value="2">A</option>
+              <option value="1">B</option>
+              <option value="0.5">C</option>
+            </select>
+          </div>
+          <div class="groupSelector">
+            <h3 class="mr-2">khu đối tượng ưu tiên:</h3>
+            <select name="" id="groupPriorType">
+              <option value="0">không</option>
+              <option value="2.5">1</option>
+              <option value="1.5">2</option>
+              <option value="1">3</option>
+            </select>
+          </div>
+        </div>
+        <div class="button mt-8">
+          <button
+            class="font-medium leading-5 rounded-full text-sm px-4 py-2.5"
+            onclick="scoreCalc()"
+          >
+            Tính điểm
+          </button>
+        </div>
+        <div class="result-display mt-4">
+          <p id="showInfo_1"></p>
+        </div>
+      </div>
+    </section>
+    <!-- tính tiền điện -->
+    <section>
+      <div class="container">
+        <div class="title">
+          <h1>tính tiền điện</h1>
+        </div>
+        <div class="calc">
+          <input
+            class=""
+            id="name"
+            type="text"
+            value=""
+            placeholder="Họ và Tên"
+          />
+          <input
+            class=""
+            id="KwNumber"
+            type="number"
+            value=""
+            placeholder="Số Kw"
+          />
+          <button
+            class="font-medium leading-5 rounded-full text-sm px-4 py-2.5"
+            onclick="KwCalc()"
+          >
+            Tính tiền điện
+          </button>
+        </div>
+        <div class="result-display">
+          <p id="showInfo_2"></p>
+        </div>
+      </div>
+    </section>
+    <!-- thuế thu nhập cá nhân -->
+    <section>
+      <div class="container">
+        <div class="title">
+          <h1>Tính thuế thu nhập cá nhân</h1>
+        </div>
+        <div class="calc">
+          <input id="name2" type="text" value="" placeholder="Họ và Tên" />
+          <input
+            id="annualIncomeNum"
+            type="number"
+            value=""
+            placeholder="Tổng thu nhập năm"
+          />
+          <input
+            id="dependentsNum"
+            type="number"
+            value=""
+            placeholder="Số người phụ thuộc"
+          />
+          <button
+            class="font-medium leading-5 rounded-full text-sm px-4 py-2.5"
+            onclick="taxCalc()"
+          >
+            Tính thuế phải nộp
+          </button>
+        </div>
+        <div class="result-display">
+          <p id="showInfo_3"></p>
+        </div>
+      </div>
+    </section>
+    <!-- tính hóa đơn tùy loại khách hàng -->
+    <section>
+      <div class="container">
+        <div class="title">
+          <h1>tính hóa đơn</h1>
+        </div>
+        <div class="calc">
+          <select name="" id="type" onchange="getType()">
+            <option value="0">Chọn loại khách hàng</option>
+            <option value="nhaDan">Nhà dân</option>
+            <option value="doanhNghiep">Doanh Nghiệp</option>
+          </select>
+          <input id="userID" type="text" value="" placeholder="Mã khách hàng" />
+          <input
+            id="channelsNum"
+            type="number"
+            value=""
+            placeholder="Số kênh cao cấp"
+          />
+          <input
+            id="connectsNum"
+            style="display: none"
+            type="number"
+            value=""
+            placeholder="Số kêt nối"
+          />
+          <button
+            class="font-medium leading-5 rounded-full text-sm px-4 py-2.5"
+            onclick="mainCalc()"
+          >
+            Tính tiền cáp
+          </button>
+        </div>
+        <div class="result-display">
+          <p id="showInfo_4"></p>
+        </div>
+      </div>
+    </section>
+    <script src="./index.js"></script>
+  </body>
+</html>
